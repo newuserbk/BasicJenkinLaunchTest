@@ -19,6 +19,8 @@ class Test1_login:
         print("Launching driver")
         driver.get("https://www.google.com")
         time.sleep(4)
+        url = driver.current_url
+        print("Navigated URL is : " + url)
         assert "Google" in driver.title
 
     def test_tear_down(self):
@@ -26,6 +28,3 @@ class Test1_login:
         print("closing browser")
         driver.close()
         driver.quit()
-
-
-
